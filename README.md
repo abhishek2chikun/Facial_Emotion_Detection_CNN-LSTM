@@ -9,4 +9,21 @@ This dataset consists of 35887 grayscale, 48x48 sized face images with **seven e
 
 The repository is currently compatible with `tensorflow-2.0` and makes use of the Keras API using the `tensorflow.keras` library.
 
-* If you want to view the predictions without training again, you can download the pre-trained model from [here](https://drive.google.com/file/d/1FUn0XNOzf-nQV7QjbBPA6-8GLoHNNgv-/view?usp=sharing) and then run:  
+* The [original FER2013 dataset in Kaggle](https://www.kaggle.com/deadskull7/fer2013) is available as a single csv file. I had converted into a dataset of images in the PNG format for training/testing and provided this as the dataset in the previous section.
+
+
+## Algorithm
+
+* First, the **haar cascade** method is used to detect faces in each frame of the webcam feed.
+
+* The region of image containing the face is resized to **48x48** and is passed as input to the CNN.
+
+* Then we extract features from CNN and pass into **LSTM** Model.
+
+* The network outputs a list of **softmax scores** for the seven classes of emotions.
+
+* The emotion with maximum score is displayed on the screen.
+
+## Example Output
+
+![model architecture](model_flow.png)
