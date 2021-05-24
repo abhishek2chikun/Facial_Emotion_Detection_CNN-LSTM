@@ -24,6 +24,6 @@ The repository is currently compatible with `tensorflow-2.0` and makes use of th
 
 * The emotion with maximum score is displayed on the screen.
 
-## Example Output
+## Model Architecture
 
 ![model architecture](model_flow.png)
